@@ -1,0 +1,283 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+  
+}
+
+h2.heading-text {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #222;
+  text-align: center;
+  position: relative;
+}
+
+h2.heading-text::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #ffbf35;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Header styles */
+.main-panel {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 20px 0 60px;
+  text-align: center;
+  position: relative;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffbf35;
+  text-align: left;
+}
+
+nav {
+  text-align: right;
+  padding: 10px 0;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffbf35;
+}
+
+.banner-section {
+  margin-top: 60px;
+}
+
+.banner-section h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.banner-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.banner-section a {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  color: #ffbf35;
+  transition: transform 0.3s;
+}
+
+.banner-section a:hover {
+  transform: scale(1.2);
+}
+
+/* About Section */
+.about-us {
+  padding: 0 30px;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills Section */
+
+.bg-lightgrey {
+  background-color: #f0f0f0;
+}
+
+.skill h3 {
+  margin: 20px 0 10px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill div {
+  background-color: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+    align-items: center;
+}
+
+.skill div span {
+  
+  display: block;
+  height: 100%;
+  background-color: #ffbf35;
+  transition: width 0.5s;
+  align-items: center;
+}
+
+/* Circular Progress Bars */
+[role="progressbar"] {
+  --size: 100px;
+  --fg: #ffbf35;
+  --bg: #ddd;
+  --thickness: 10px;
+
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background:
+    radial-gradient(closest-side, white 79%, transparent 80% 100%),
+    conic-gradient(var(--fg) calc(var(--value) * 1%), var(--bg) 0);
+  display: inline-grid;
+  place-content: center;
+  font-weight: bold;
+  margin: 20px;
+  align-items: center;
+}
+
+[role="progressbar"]::before {
+  content: attr(aria-label) attr(--value) '%';
+}
+
+/* Services Section */
+.service-list {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.service-list:hover {
+  transform: translateY(-5px);
+}
+
+.service-list i {
+  font-size: 2.5rem;
+  color: #ffbf35;
+  margin-bottom: 15px;
+}
+
+.service-list h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Contact Section */
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+.contact button {
+  background-color: #ffbf35;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact button:hover {
+  background-color: #e6a700;
+}
+
+.social-icon a {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-icon a:hover {
+  color: #ffbf35;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.9rem;
+}
+
+.footer-sect a {
+  margin: 0 10px;
+  color: #ffbf35;
+}
+
+/* Layout */
+.width-50 {
+  width: 100%;
+  max-width: 50%;
+  float: left;
+  padding: 20px;
+}
+
+.width-33 {
+  width: 100%;
+  max-width: 33.33%;
+  float: left;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .width-50,
+  .width-33 {
+    max-width: 100%;
+    float: none;
+  }
+
+  nav {
+    text-align: center;
+  }
+
+  .logo {
+    text-align: center;
+  }
+}
